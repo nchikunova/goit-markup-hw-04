@@ -47,13 +47,19 @@ li a {
     padding-left: 15px;
     padding-right: 15px;
 
-    border-bottom: 1px solid #ECECEC;
 }
 
 /* Меню-навигации */
 
+header {
+    border-bottom: 1px solid #ECECEC;
+
+}
+
+
 .header {
     display: inherit;
+
 }
 
 
@@ -82,26 +88,15 @@ li a {
     margin-left: 0; 
 }
 
-
-/* .auth-nav .item {
-    display: inline-block;
-    margin-right: 10px;
-}  */
-
 .icon-nav {
     /* width: 16px;
     max-height: 16px; */
     margin-right: 10px;
   }
 
-/* .auth-nav .item:last-child {
-margin-right: 0;
-
-} */
-
 /* Переназначила переменные для svg в меню */
 
-.icon-nav:hover {
+/* .icon-nav:hover {
     --color1: var(--accent-color);
     --color5: var(--accent-color);
 }
@@ -109,7 +104,7 @@ margin-right: 0;
 .icon-nav:hover,
 .icon-nav:focus {
     fill: var(--accent-color);
-}
+} */
 
 /* Лого-марджины */
 
@@ -159,27 +154,30 @@ margin-right: 0;
     font-size: 14px;
     line-height: 1.15;}
 
-.mail:hover,
-.mail:active {
-       text-decoration: underline
-       var(--accent-color);
-       color: var(--accent-color);
+/* .icon-nav {
+    fill: var(--primary-text-color)
+} */
+
+.auth-nav .mail {
+    fill: var(--primary-text-color);
+
+}
+
+.auth-nav .tel {
+    fill: var(--primary-text-color);
+}
+
+
+.icon-nav:hover,
+.icon-nav:active {
+       fill: var(--accent-color);
     }
 
-.mail-portfolio {
-    margin-right: 30px;
-    text-decoration: none;
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.15;}
-
-.mail-portfolio:hover,
-.mail-portfolio:active {
-                 text-decoration: underline
-                 var(--accent-color);
-                 color: var(--accent-color);
-               }
+.mail:hover,
+.mail:active {
+    color: var(--accent-color);
+       fill: var(--accent-color);
+    }
 
 .tel {
     color: var(--primary-text-color);
@@ -190,10 +188,10 @@ margin-right: 0;
     text-decoration: none;
 }
 
-
-.tel:hover,
+.tel:hover, 
 .tel:focus {
-text-decoration: underline; color: var(--accent-color);
+    color: var(--accent-color);
+    fill: var(--accent-color);
 }
  
 .site-nav a{
@@ -384,7 +382,8 @@ text-decoration: underline; color: var(--accent-color);
 }
 
 
-.item-team .link .icon:hover {
+.item-team .link:hover .icon {
+    color: var(--main-color);
     fill: var(--main-color);
 }
 
@@ -432,7 +431,6 @@ text-decoration: underline; color: var(--accent-color);
     background-color: #fff;
     width: calc((100% - 90px) /4);
     margin-right: 30px;
-
 }
 
 .member:nth-last-child(-n + 4) {
@@ -484,9 +482,9 @@ text-decoration: underline; color: var(--accent-color);
     fill: #AFB1B8;
 }
 
- .link-client .icon:hover,
- .link-client .icon:focus {
-   fill: var(--accent-color);
+.link-client:hover .icon,
+.link-client:focus .icon {
+  fill: var(--accent-color);
 }
 
 .link-client:hover,
@@ -554,7 +552,6 @@ margin-right: 156px;
     height: 44px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    
 }
 
 .footer-item .link:hover {
@@ -589,7 +586,7 @@ footer {
 .footer-logo:focus,
 .footer-logo:active {
                 color: var(--accent-color);
-            }
+}
 
 address {
     margin: 0;
@@ -622,8 +619,8 @@ address {
 .footer-contacts:active,
 .footer-contacts:focus,
 .footer-contacts:hover { 
-    text-decoration: underline;
-    color: var(--accent-color); 
+    text-decoration: underline var(--accent-color);
+    /* color: var(--accent-color);  */
 }
 
 /* Portfolio-page */
@@ -640,23 +637,6 @@ address {
     display: flex;
     justify-content: center;}
    
-
-.current-button {
-    margin-right: 8px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 22px;
-    padding-right: 22px;
-
-    border-radius: 4px;
-    border-color: var(--accent-color);
-    background: var(--accent-color);
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-   }
-               
 .buttons {
     
     padding-top: 6px;
@@ -681,18 +661,16 @@ address {
     margin-right: 0;
 }
 
-
+.buttons:hover {
+color: var(--main-color);
+background: var(--accent-color);
+}
 
 
 /* Убрала черную рамку с кнопок при нажатии */
 
 .buttons:active, 
 .buttons:focus {
-    outline: none;
-}
-
-.current-button:active,
-.current-button:focus {
     outline: none;
 }
 
