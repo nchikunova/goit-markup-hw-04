@@ -261,7 +261,6 @@ header {
 
 .button:hover,
 .button:focus {
-    text-decoration: underline;
     color: var(--main-color)
 }
 /* Main section Наши преимущества*/
@@ -619,9 +618,7 @@ address {
 .footer-contacts:active,
 .footer-contacts:focus,
 .footer-contacts:hover { 
-    text-decoration: underline var(--accent-color);
-    /* color: var(--accent-color);  */
-}
+    color: rgba(255, 255, 255, 0.6);}
 
 /* Portfolio-page */
 
